@@ -28,8 +28,20 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
-      body: const Center(
-        child: Text('Test Projects'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Center(
+            child: Text('Test Projects'),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Click'),
+          ),
+        ],
       ),
     );
   }
