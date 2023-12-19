@@ -12,8 +12,10 @@ class HomePage extends StatelessWidget {
     );
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
+
         appBar: AppBar(
-          title: Text('flutter apps'),
+          title: const Text('Profile'),
           actions: [
             IconButton(
               onPressed: () {},
@@ -23,120 +25,9 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: Text(
-                  'Flutter projects',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  '1',
-                  style: textStyle,
-                ),
-                Text(
-                  '3',
-                  style: textStyle,
-                ),
-                Text(
-                  '4',
-                  style: textStyle,
-                ),
-                Text(
-                  '5',
-                  style: textStyle,
-                ),
-                Text(
-                  '6',
-                  style: textStyle,
-                ),
-                Text(
-                  '7',
-                  style: textStyle,
-                ),
-                Text(
-                  '8',
-                  style: textStyle,
-                ),
-                Text(
-                  '9',
-                  style: textStyle,
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Fokrul Islam',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Image(
-              image: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/73265474?v=4'),
-              width: 200,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              'Fokrul Islam',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Image(
-              image: NetworkImage(
-                  'https://avatars.githubusercontent.com/u/73265474?v=4'),
-              width: 200,
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: Text('simple Projecs'),
-                        content: Text('about this projecs apps'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('Cancel'),
-                          ),
-                        ],
-                      );
-                    });
-              },
-              child: Text('tap here'),
-            ),
-            SizedBox(height: 10),
-            Spacer(),
-            //RichText.....
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RichText(
-                text: TextSpan(
-                  text: '@copyright by: ',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.red,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: 'fokrulIslam@.com ',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          decoration: TextDecoration.underline,
-                        )),
-                    // TextSpan(text: 'Ostad',style: TextStyle(color: Colors.blueAccent))
-                  ],
-                ),
-              ),
-            )
+           Stack(children: [
+             Image.network('https://t4.ftcdn.net/jpg/05/51/97/35/360_F_551973570_VXTDIzhU4GFXslKedPVQFBUfKYbIF3OM.jpg')
+           ],)
           ],
         ),
       ),
