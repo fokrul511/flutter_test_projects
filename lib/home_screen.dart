@@ -1,33 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var textStyle = TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w500,
-      color: Colors.cyan,
-    );
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
-
         appBar: AppBar(
-          title: const Text('Profile'),
+          title: Text(
+            'Module 7 -class 1',
+          ),
+          backgroundColor: Colors.green,
+          elevation: 0,
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                print('action menu bar');
+              },
               icon: Icon(Icons.menu),
-            ),
+            )
           ],
         ),
         body: Column(
           children: [
-           Stack(children: [
-             Image.network('https://t4.ftcdn.net/jpg/05/51/97/35/360_F_551973570_VXTDIzhU4GFXslKedPVQFBUfKYbIF3OM.jpg')
-           ],)
+            Text(
+              ' today witch wiget implement our apps',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            Row(
+              children: [],
+            ),
           ],
         ),
       ),
