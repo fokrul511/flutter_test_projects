@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   mySnakeBar(message, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -38,16 +43,57 @@ class HomePage extends StatelessWidget {
         });
   }
 
+  ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+    minimumSize: Size(double.infinity, 44),
+  );
+  //
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: ElevatedButton(
-              onPressed: () {
-                myAlartDiylog(context);
-              },
-              child: Text('Alart Button')),
+        appBar: AppBar(
+          title: Text('Simple From'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'First Name',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Last Name',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'email Address',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ElevatedButton(
+                  style: buttonStyle,
+                  onPressed: () {
+                    mySnakeBar('Submit Your From ditails', context);
+                  },
+                  child: Text('Submit')),
+            ),
+          ],
         ),
       ),
     );
