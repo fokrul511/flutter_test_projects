@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-mySnakeBar(message, context){
-  return ScaffoldMessenger(child:Container() );
-}
+  //
+  mySnakeBar(message, context) {
+    return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(message),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +44,9 @@ mySnakeBar(message, context){
             height: 10,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              mySnakeBar('Click button', context);
+            },
             child: Text('Click'),
           ),
         ],
