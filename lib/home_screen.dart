@@ -10,10 +10,10 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Module 7 -class 1',
+            'Module 7 -class 1',//
           ),
           backgroundColor: Colors.green,
-          elevation: 0,
+          elevation: 1,
           actions: [
             IconButton(
               onPressed: () {
