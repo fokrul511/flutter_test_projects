@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
+mySnakeBar(message, context){
+  return ScaffoldMessenger(child:Container() );
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
