@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_projects/home_screen.dart';
 
 import 'grid_view.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Flutter Demo',
-      home: GridViewScreen(),//home page
+      home: HomePage(),//home page
     );
   }
 }
