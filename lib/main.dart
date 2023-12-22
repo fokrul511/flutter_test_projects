@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_projects/home_screen.dart';
-
-import 'grid_view.dart';
-
 void main() {
   runApp(const MyApp());
 }
