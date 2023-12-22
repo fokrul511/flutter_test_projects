@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'list.dart';
 
 mysnakeBar(context, message) {
   return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
