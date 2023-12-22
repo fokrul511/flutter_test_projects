@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('My apps'),
+            title: Text('Tab Bar'),
             bottom: TabBar(
                 // isScrollable: true,
                 tabs: [
@@ -31,8 +31,7 @@ class HomePage extends StatelessWidget {
                   Tab(text: 'Calls'),
                 ]),
           ),
-          body: TabBarView(
-              children: [
+          body: TabBarView(children: [
             GroupFragment(),
             ChatsFragment(),
             UpdateFragment(),
