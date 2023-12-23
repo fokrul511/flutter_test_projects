@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_projects/home_screen.dart';
+// import 'package:flutter_test_projects/home_screen.dart';
+
+import 'home.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(      debugShowCheckedModeBanner: true,
       title: 'Tab bar',
-      home: HomePage(),//home page
+      home: MyHomePage(),//home page
     );
   }
 }
