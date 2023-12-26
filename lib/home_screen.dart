@@ -137,29 +137,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-
-void mySnackBar(BuildContext context, String message) {
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      duration: const Duration(seconds: 2),
-      content: SlideTransition(
-        position: Tween<Offset>(
-          begin: Offset(1.0, 0.0), // Start from right
-          end: Offset(0.0, 0.0),
-        ).animate(
-          CurvedAnimation(
-            parent: Scaffold.of(context).showSnackBar(
-              SnackBar(
-                content: SizedBox.shrink(),
-              ),
-            ),
-            curve: Curves.easeInOut,
-          ),
-        ),
-        child: SnackBarContent(message: message),
-      ),
-      backgroundColor: Colors.purple,
-    ),
-  );
-}
-}
