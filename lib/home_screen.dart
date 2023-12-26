@@ -121,13 +121,14 @@ class HomePage extends StatelessWidget {
               child: ListTile(
                 title: Text(contactList[index]['title']!),
                 subtitle: Text(contactList[index]['number']!),
-                trailing: IconButton(onPressed: () {}, icon: Icon(Icons.call)),
+                trailing: IconButton(onPressed: () {}, icon: Icon(Icons.message)),
                 // focusColor: Colors.blue,
                 // selectedColor: Colors.blue,
                 iconColor: Colors.white,
                 // splashColor: Colors.blue,
                 textColor: Colors.white,
                 tileColor: Colors.black87,
+
               ),
             ),
           );
