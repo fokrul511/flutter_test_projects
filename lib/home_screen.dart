@@ -89,9 +89,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: const Icon(
-          Icons.home,
-          color: Colors.white,
+        leading:  IconButton(
+          onPressed: (){
+            Navigator.pushNamed(context,'/profile');
+          },
+           icon: Icon(Icons.person),
         ),
         actions: const [
           Padding(
